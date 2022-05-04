@@ -4,91 +4,90 @@ body{
 }
 
 
-  
-  
-  .clock {
-    border-radius: 100%;
-    width: 190px;
-    height: 190px;
-    background: #ffffff;
-    font-family: "Montserrat";
-    border: 4px solid rgb(255, 255, 255);
-    box-shadow: inset 6px 2px 20px 0 rgba(26, 26, 26, 0.9);
-    background-image:
-    radial-gradient(circle at center, white 50%, transparent 50%, transparent 65%, white 65%),
-    linear-gradient(to right, transparent 50%, #507D9C 50%, transparent 51%),
-    linear-gradient(to bottom, transparent 50%, #507D9C 50%, transparent 51%),
-    linear-gradient(-30deg, transparent 50%, #507D9C 50%, transparent 51%),
-        linear-gradient(30deg, transparent 50%, #507D9C 50%, transparent 51%),
-     linear-gradient(60deg, transparent 50%, #507D9C 50%, transparent 51%),
-    linear-gradient(-60deg, transparent 50%, #507D9C 50%, transparent 51%);
-}
-  
-  
-  .wrap {
-    overflow: hidden;
-    position: relative;
-    width: 180px;
-    height: 180px;
-    border-radius: 100%;
-  }
-  
-  .minute,
-  .hour {
-    position: absolute;
-    height: 60px;
-    width: 6px;
-    margin: auto;
-    top: -27%;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: black;
-    transform-origin: bottom center;
-    transform: rotate(0deg);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-    z-index: 1;
-  }
-  
-  .minute {
-    position: absolute;
-    height: 80px;
-    width: 4px;
-    top: -38%;
-    left: 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-    transform: rotate(90deg);
-  }
-  
-  .second {
-    position: absolute;
-    height: 60px;
-    width: 2px;
-    margin: auto;
-    top: -26%;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 4px;
-    background: #FF4B3E;
-    transform-origin: bottom center;
-    transform: rotate(180deg);
-    z-index: 1;
-  }
 
-  .dot {
-    position: absolute;
-    top: 9px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width:  12px;
-    height: 12px;
-    border-radius: 100px;
-    background: white;
-    border: 2px solid #1b1b1b;
-    margin: auto;
-    z-index: 1;
-  }
-  
-  
+.clock {
+	min-height: 14em;
+	min-width: 14em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1e1f26;
+	background-image: url("https://imvpn22.github.io/analog-clock/clock.png");
+	background-position: center center;
+	background-size: cover;
+	border-radius: 50%;
+	border: 4px solid #1d1b1b;
+	box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+		inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
+		inset 0 15px 15px rgba(0, 0, 0, 0.3);
+	transition: all ease 0.2s;
+}
+.clock:before {
+	content: "";
+	height: 0.75rem;
+	width: 0.75rem;
+	background-color: gray;
+	border: 2px solid white;
+	position: absolute;
+	border-radius: 50%;
+	z-index: 1000;
+	transition: all ease 0.2s;
+}
+.hours,
+.minutes,
+.seconds {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.hours {
+	height: 6em;
+	width: 6em;
+}
+
+.hours:before {
+	content: "";
+	position: absolute;
+	height: 55px;
+	width: 6px;
+	background-color: rgb(122, 255, 14);
+	border-radius: 6px;
+}
+
+.minutes {
+	height: 12em;
+	width: 12em;
+}
+
+/*hand minute*/
+.minutes:before {
+	content: "";
+	height: 50%;
+	width: 3px;
+	background-color: rgb(255, 0, 200);
+	border-radius: 10px;
+}
+.seconds {
+	height: 13em;
+	width: 13em;
+}
+.seconds:before {
+	content: "";
+	height: 60%;
+	width: 2px;
+	background-color: #177fe7;
+	border-radius: 4px;
+}
+
+
+/**/
+
+
+
+
+
+
+
+
