@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Time-Zone/static/css/main.89b8e32a.css",
+    "main.js": "/Time-Zone/static/js/main.29a337cf.js",
+    "index.html": "/Time-Zone/index.html",
+    "main.89b8e32a.css.map": "/Time-Zone/static/css/main.89b8e32a.css.map",
+    "main.29a337cf.js.map": "/Time-Zone/static/js/main.29a337cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89b8e32a.css",
+    "static/js/main.29a337cf.js"
+  ]
+}
